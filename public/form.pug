@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title= Express
+  body
+    h1 Form
+    - if (typeof(err) !== 'undefined'){
+        ul
+            each val in err
+                li= val.msg
+    -}
+    
+    form(action="/form" method="POST")
+      input(type="text" name="username" placeholder="username")
+      br
+      input(type="password" name="password" placeholder="password" )
+      br
+      input(type="text" name="gender" placeholder="gender")
+      br
+      input(type='checkbox' name='agreement')
+      span agree with
+      br
+      button(type="submit") Submit

@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title= Express
+  body
+    h1 id:  #{id}
+    h3 param query
+    ul
+      each val, index in query
+        li= index + ': ' + val
+    h3 cookies
+    ul
+      each val, index in cookies
+        li= index + ': ' + val
+    h3 headers
+    ul
+      each val, index in headers
+        li= index + ': ' + val
+    
+
+
+    
+          
